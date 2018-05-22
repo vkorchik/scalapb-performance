@@ -1,19 +1,15 @@
-package vkorchik
+package vkorchik.serialization
 
 import java.util.concurrent.TimeUnit
 
-import protos.small.Small
-
 import org.openjdk.jmh.annotations._
+import vkorchik.Data
 
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-class SS {
-
-  val small = Small(14)
+class MediumScala {
 
   @Benchmark
-  def test: Array[Byte] = small.toByteArray
-
+  def test: Array[Byte] = Data.scala.medium.toByteArray
 }

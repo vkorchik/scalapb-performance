@@ -1,0 +1,43 @@
+syntax = "proto2";
+
+option java_package = "vkorchik";
+
+message Small {
+    required int32 id = 1;
+    optional string name = 2;
+    optional bool exists = 3;
+}
+
+message Medium {
+    required int32 id = 1;
+    optional string name = 2;
+    optional bool exists = 3;
+    repeated Small small = 4;
+}
+
+message Big {
+    required int32 id = 1;
+    optional string name = 2;
+    optional bool exists = 3;
+    repeated Small small = 4;
+    repeated Medium medium = 5;
+}
+
+message Huge {
+    required int32 id = 1;
+    optional string name = 2;
+    optional bool exists = 3;
+    repeated Small small = 4;
+    repeated Medium medium = 5;
+    repeated Big big = 6;
+    optional string field1 = 7;
+    optional string field2 = 8;
+    optional string field3 = 9;
+    optional string field4 = 10;
+    optional string field5 = 11;
+    optional string field6 = 12;
+    optional string field7 = 13;
+    optional string field8 = 14;
+    optional string field9 = 15;
+    optional string field10 = 16;
+}
