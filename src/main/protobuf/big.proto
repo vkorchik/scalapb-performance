@@ -1,0 +1,16 @@
+
+syntax = "proto2";
+
+option java_package = "protos";
+
+import "small.proto";
+import "medium.proto";
+
+message Big {
+    required int32 id = 1;
+    optional string name = 2;
+    optional Small small = 3;
+    repeated Medium medium = 4;
+}
+
+

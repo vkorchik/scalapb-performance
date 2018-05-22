@@ -1,0 +1,28 @@
+
+syntax = "proto2";
+
+option java_package = "protos";
+
+import "small.proto";
+import "medium.proto";
+import "big.proto";
+
+message Huge {
+    required int32 id = 1;
+    optional string name = 2;
+    repeated Small small = 3;
+    repeated Medium medium = 4;
+    repeated Big big = 5;
+    optional string field1 = 6;
+    optional string field2 = 7;
+    optional string field3 = 8;
+    optional string field4 = 9;
+    optional string field5 = 10;
+    optional string field6 = 11;
+    optional string field7 = 12;
+    optional string field8 = 13;
+    optional string field9 = 14;
+    optional string field10 = 15;
+}
+
+
