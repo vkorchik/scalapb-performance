@@ -11,5 +11,7 @@ import vkorchik.Data
 class HugeJava {
 
   @Benchmark
-  def test: Array[Byte] = Data.Java.huge.toByteArray
+  @OperationsPerInvocation(100)
+  def test: Array[Byte] =
+    (0 to 100) map (_ => Data.Java.huge.toByteArray) head
 }

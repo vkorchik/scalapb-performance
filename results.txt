@@ -1,0 +1,33 @@
+1 operation/invocation
+
+[info] # VM options: <none>
+[info] # Warmup: 20 iterations, 10 s each
+[info] # Measurement: 15 iterations, 10 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Average time, time/op
+
+[info] Benchmark        Mode  Cnt   Score   Error  Units
+[info] SmallJava.test   avgt   15  41.929 ± 0.224  ns/op
+[info] SmallScala.test  avgt   15  44.129 ± 0.221  ns/op
+
+
+
+100 operation/invocation
+
+[info] # VM options: <none>
+[info] # Warmup: 20 iterations, 10 s each
+[info] # Measurement: 15 iterations, 10 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Average time, time/op
+
+[info] Benchmark        Mode  Cnt   Score   Error  Units
+[info] SmallJava.test   avgt   15  56.056 ± 0.334  ns/op
+[info] SmallScala.test  avgt   15  42.630 ± 0.624  ns/op
+
+[info] MediumJava.test   avgt   15  392.031 ±  2.678  ns/op
+[info] MediumScala.test  avgt   15  497.425 ± 59.717  ns/op
+
+[info] EnormousJava.test   avgt   15  513354.275 ± 4211.695  ns/op
+[info] EnormousScala.test  avgt   15  578894.267 ± 6029.369  ns/op

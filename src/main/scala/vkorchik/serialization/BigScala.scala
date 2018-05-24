@@ -11,5 +11,7 @@ import vkorchik.Data
 class BigScala {
 
   @Benchmark
-  def test: Array[Byte] = Data.Scala.big.toByteArray
+  @OperationsPerInvocation(100)
+  def test: Array[Byte] =
+    (0 to 100) map (_ => Data.Scala.big.toByteArray) head
 }

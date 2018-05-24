@@ -11,5 +11,7 @@ import vkorchik.Data
 class EnormousScala {
 
   @Benchmark
-  def test: Array[Byte] = Data.Scala.enormous.toByteArray
+  @OperationsPerInvocation(100)
+  def test: Array[Byte] =
+    (0 to 100) map (_ => Data.Scala.enormous.toByteArray) head
 }

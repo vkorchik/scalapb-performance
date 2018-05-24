@@ -11,5 +11,7 @@ import vkorchik.Data
 class SmallJava {
 
   @Benchmark
-  def test: Array[Byte] = Data.Java.small.toByteArray
+  @OperationsPerInvocation(100)
+  def test: Array[Byte] =
+    (0 to 100) map (_ => Data.Java.small.toByteArray) head
 }

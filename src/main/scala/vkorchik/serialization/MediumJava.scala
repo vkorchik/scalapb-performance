@@ -11,5 +11,7 @@ import vkorchik.Data
 class MediumJava {
 
   @Benchmark
-  def test: Array[Byte] = Data.Java.medium.toByteArray
+  @OperationsPerInvocation(100)
+  def test: Array[Byte] =
+    (0 to 100) map (_ => Data.Java.medium.toByteArray) head
 }

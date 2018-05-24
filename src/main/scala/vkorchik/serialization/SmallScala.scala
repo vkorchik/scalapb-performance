@@ -11,6 +11,8 @@ import vkorchik.Data
 class SmallScala {
 
   @Benchmark
-  def test: Array[Byte] = Data.Scala.small.toByteArray
+  @OperationsPerInvocation(100)
+  def test: Array[Byte] =
+    (0 to 100) map (_ => Data.Scala.small.toByteArray) head
 
 }

@@ -8,10 +8,10 @@ import vkorchik.Data
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-class MediumScala {
+class EnormousJava {
 
   @Benchmark
   @OperationsPerInvocation(100)
   def test: Array[Byte] =
-    (0 to 100) map (_ => Data.Scala.medium.toByteArray) head
+    (0 to 100) map (_ => Data.Java.enormous.toByteArray) head
 }
