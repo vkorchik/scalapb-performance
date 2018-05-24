@@ -11,5 +11,5 @@ import vkorchik.Data
 class HugeJava {
 
   @Benchmark
-  def test: Array[Byte] = Data.java.huge.toByteArray
+  def test: Array[Byte] = Data.Java.huge.toByteArray
 }

@@ -11,5 +11,5 @@ import vkorchik.Data
 class BigScala {
 
   @Benchmark
-  def test: Array[Byte] = Data.scala.big.toByteArray
+  def test: Array[Byte] = Data.Scala.big.toByteArray
 }

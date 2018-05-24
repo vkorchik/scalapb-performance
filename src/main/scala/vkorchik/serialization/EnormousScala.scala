@@ -8,8 +8,8 @@ import vkorchik.Data
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-class BigJava {
+class EnormousScala {
 
   @Benchmark
-  def test: Array[Byte] = Data.Java.big.toByteArray
+  def test: Array[Byte] = Data.Scala.enormous.toByteArray
 }

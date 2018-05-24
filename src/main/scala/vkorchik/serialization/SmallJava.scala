@@ -11,5 +11,5 @@ import vkorchik.Data
 class SmallJava {
 
   @Benchmark
-  def test: Array[Byte] = Data.java.small.toByteArray
+  def test: Array[Byte] = Data.Java.small.toByteArray
 }

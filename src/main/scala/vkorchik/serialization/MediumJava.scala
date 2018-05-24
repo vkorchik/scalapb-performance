@@ -11,5 +11,5 @@ import vkorchik.Data
 class MediumJava {
 
   @Benchmark
-  def test: Array[Byte] = Data.java.medium.toByteArray
+  def test: Array[Byte] = Data.Java.medium.toByteArray
 }

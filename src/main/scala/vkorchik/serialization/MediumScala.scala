@@ -11,5 +11,5 @@ import vkorchik.Data
 class MediumScala {
 
   @Benchmark
-  def test: Array[Byte] = Data.scala.medium.toByteArray
+  def test: Array[Byte] = Data.Scala.medium.toByteArray
 }

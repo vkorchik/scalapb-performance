@@ -1,15 +1,18 @@
-package vkorchik.serialization
+package vkorchik.deserialization
 
 import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations._
 import vkorchik.Data
+import vkorchik.Protos.Medium
 
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-class BigJava {
+class MediumJava {
+
+  val bytes = Data.Java.medium.toByteArray
 
   @Benchmark
-  def test: Array[Byte] = Data.Java.big.toByteArray
+  def test: Medium = Medium.parseFrom(bytes)
 }

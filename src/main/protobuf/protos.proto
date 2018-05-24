@@ -41,3 +41,36 @@ message Huge {
     optional string field9 = 15;
     optional string field10 = 16;
 }
+
+message Enormous {
+    required int32 id = 1;
+    optional string name = 2;
+    optional bool exists = 3;
+    repeated Small small = 4;
+    repeated Medium medium = 5;
+    repeated Big big = 6;
+    repeated Huge huge = 7;
+    repeated int64 longs = 8;
+    optional string field1 = 9;
+    optional string field2 = 10;
+    optional string field3 = 11;
+    optional string field4 = 12;
+    optional string field5 = 13;
+    optional string field6 = 14;
+    optional string field7 = 15;
+    optional string field8 = 16;
+    optional string field9 = 17;
+    optional string field10 = 18;
+    optional string field11 = 19;
+    optional string field12 = 20;
+    optional string field13 = 21;
+    optional string field14 = 22;
+    optional string field15 = 23;
+    optional string field16 = 24;
+    optional string field17 = 25;
+    optional string field18 = 26;
+    optional string field19 = 27;
+    optional string field20 = 28;
+    optional Huge hugeExt1 = 29;
+    optional Huge hugeExt2 = 30;
+}
